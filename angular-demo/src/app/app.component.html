@@ -1,0 +1,34 @@
+<h1>Property Based Testing Protractor Demo</h1>
+
+<div class="container">
+  <h2>Demo Form</h2>
+  <p id="submitted-object">Submitted object: {{ submitted | json }}</p>
+  <form #demoForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="demo-name-input">Name</label>
+      <input
+        type="text"
+        [(ngModel)]="anyName"
+        name="demo-name"
+        class="form-control"
+        id="demo-name-input"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="demo-description-input">Description</label>
+      <input
+        type="text"
+        [(ngModel)]="description"
+        name="demo-description"
+        class="form-control"
+        id="demo-description-input"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success" id="demo-submit-button">
+      Submit
+    </button>
+  </form>
+</div>
